@@ -24,6 +24,7 @@ namespace WpfApplication1
     public partial class MainWindow : Window, INotifyPropertyChanged
     {
         private string m_testBinding;
+        private object m_textBinding;
 
         public MainWindow()
         {
@@ -39,6 +40,17 @@ namespace WpfApplication1
             {
                 if (value == m_testBinding) return;
                 m_testBinding = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public object TextBinding
+        {
+            get { return m_textBinding; }
+            set
+            {
+                if (Equals(value, m_textBinding)) return;
+                m_textBinding = value;
                 OnPropertyChanged();
             }
         }

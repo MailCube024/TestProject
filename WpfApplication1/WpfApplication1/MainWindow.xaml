@@ -12,5 +12,6 @@
     <StackPanel Orientation="Vertical">
         <Label Content="This is a test" />
         <Label Content="{Binding TestBinding}" />
+        <TextBlock Text="{Binding TextBinding}"/>
     </StackPanel>
 </Window>
